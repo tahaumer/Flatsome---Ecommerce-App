@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+:root {--swiper-theme-color: #ffffff;  --swiper-navigation-size: 23px;}
+.product-container::-webkit-scrollbar{display: none;}
+@tailwind utilities;

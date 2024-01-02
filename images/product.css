@@ -1,0 +1,468 @@
+/* PRODUCTS */
+.product {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.section-title-container {
+  margin-bottom: 1.5em;
+}
+
+.container-edit {
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+
+.section-title {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+h3 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+  text-rendering: optimizeSpeed;
+}
+
+.section-title b {
+  background-color: black;
+  display: block;
+  flex: 1;
+  height: 2px;
+  opacity: .1;
+  font-weight: bolder;
+
+}
+
+.section-title-center span {
+  text-align: center;
+  margin: 0 15px;
+  color: dimgray;
+}
+
+.container-edit:after,
+.row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.product-container {
+  /* padding: 0 10vw; */
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 15px;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 325px;
+  overflow: hidden;
+}
+
+.product-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-tag {
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ff7d7d;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 100%;
+  text-transform: capitalize;
+  border: 1px solid #2f435d;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card-btn-3 {
+  bottom: 25px;
+  opacity: 1;
+  border: none;
+}
+
+.product-card:hover .card-btn {
+  background-color: #2f435d;
+  color: #fff;
+  opacity: 1;
+}
+
+.card-btn:hover .product-thumb {
+  background-image: url(images/hover1.jpeg);
+}
+
+.card-btn:hover {
+  background: #2f435d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-info {
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+}
+
+.product-brand {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1;
+  color: rgb(116, 116, 116);
+  opacity: .7;
+}
+
+.product-info a {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-transform: capitalize;
+  margin: 5px 0;
+  text-decoration: none;
+  color: black;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.actual-price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  /* width: 10vw; */
+  height: 70%;
+  position: absolute;
+  top: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  z-index: 8;
+  box-shadow: -20px 0 20px -20px rgba(0, 0, 0, .3) inset;
+  opacity: .7;
+  opacity: .7;
+  visibility: hidden;
+}
+
+.product:hover .pre-btn {
+  visibility: visible;
+}
+
+.product:hover .nxt-btn {
+  visibility: visible;
+}
+
+.pre-btn {
+  left: 20px;
+  box-shadow: 9px -1px 11px -5px rgba(0, 0, 0, .3);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+
+.pre-btn:hover,
+.nxt-btn:hover {
+  opacity: 1;
+}
+
+.collection-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.collection {
+  position: relative;
+}
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+  grid-column: span 2;
+  margin-bottom: 10px;
+}
+
+
+
+/* ----images & hover images---- */
+.image-1 {
+  background-image: url(images/nohover1.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-1:hover {
+  background-image: url(images/hover1.jpeg);
+  cursor: pointer;
+}
+
+.image-2 {
+  background-image: url(images/nohover2.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-2:hover {
+  background-image: url(images/hover2.jpeg);
+  cursor: pointer;
+
+}
+
+.image-3 {
+  background-image: url(images/hover3.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-3:hover {
+  background-image: url(images/nohover3.jpeg);
+  cursor: pointer;
+
+}
+
+.image-4 {
+  background-image: url(images/hover4.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-4:hover {
+  background-image: url(images/nohover4.jpeg);
+  cursor: pointer;
+
+}
+
+.image-5 {
+  background-image: url(images/hover5.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-5:hover {
+  background-image: url(images/nohover5.jpeg);
+  cursor: pointer;
+ 
+}
+
+.image-6 {
+  background-image: url(images/nohover6.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-6:hover {
+  background-image: url(images/hover6.jpeg);
+  cursor: pointer;
+
+}
+
+.image-7 {
+  background-image: url(images/nohover7.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-7:hover {
+  background-image: url(images/hover7.jpeg);
+  cursor: pointer;
+
+}
+
+.image-8 {
+  background-image: url(images/nohover8.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-8:hover {
+  background-image: url(images/hover8.jpeg);
+  cursor: pointer;
+
+}
+
+.image-9 {
+  background-image: url(images/nohover9.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-9:hover {
+  background-image: url(images/hover9.jpeg);
+  cursor: pointer;
+
+}
+
+.image-10 {
+  background-image: url(images/nohover10.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-10:hover {
+  background-image: url(images/hover10.jpeg);
+  cursor: pointer;
+
+}
+
+.image-11 {
+  background-image: url(images/nohover11.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.image-11:hover {
+  background-image: url(images/hover11.jpeg);
+  cursor: pointer;
+
+}
+
+.clothing {
+  background-image: url(images/clothing.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.women {
+  background-image: url(images/women.jpeg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.booking {
+  background-image: url(images/booking.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.men {
+  background-image: url(images/men.jpeg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.bags {
+  background-image: url(images/bags.jpeg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.music {
+  background-image: url(images/music.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.posters {
+  background-image: url(images/posters.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+.shoes {
+  background-image: url(images/shoes.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+
+
+
+/* ----images & hover images---- */
+
+
+@media screen and (max-width: 550px) {
+
+  .product-catagory {
+    font-size: 15px;
+  }
+}
